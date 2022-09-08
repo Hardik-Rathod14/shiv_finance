@@ -51,10 +51,7 @@ $pay_emi = strtolower($pay_emi);
 
     $cstid = mysqli_real_escape_string($con, $_GET['cstid']);
     $cstid = htmlspecialchars($cstid);
-    // $_SESSION['cstid'] = base64_encode($cstid);
 
-    // echo $cstid;
-    // echo $contact_no;
     $cmd = "select * from $new_loan  where cid='$cstid' ";
 
     $result = mysqli_query($con, $cmd) or die(mysqli_error($con));
@@ -63,27 +60,18 @@ $pay_emi = strtolower($pay_emi);
 
         $id = $row['id'];
         $cid = $row['cid'];
-        // $cstid = $row['cid'];
         $customer_name = $row['customer_name'];
         $contact_no = $row['contact_no'];
         $loan_type = $row['loan_type'];
         $amount = $row['loan_amount'];
-        $paid_amount = $row['paid_amount'];
-
-        $pending_amount = $row['pending_amount'];
         $emi = $row['emi'];
         $start_date = $row['start_date'];
         $end_date = $row['end_date'];
         $loan_duration = $row['loan_duration'];
-        // $paid = $row['paid'];
-        // $date = $row['date'];
         $month_status = $row['month_status'];
         $loan_status = $row['loan_status'];
     }
-    // $ld_months = $loan_duration . ' ' . "months";
-    // echo $loan_duration;
-
-    // echo $customer_name;
+    
 
     ?>
 
@@ -460,7 +448,7 @@ $pay_emi = strtolower($pay_emi);
 
                 $mnth = 0;
 
-                $cmd1 = "select * from $pay_emi  where  cid='$cstid'";
+                $cmd1 = "select * from $pay_emi  where  cid='$cstid' ";
               
                 $result1 = mysqli_query($con, $cmd1) or die(mysqli_error($con));
 

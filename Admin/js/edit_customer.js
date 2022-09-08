@@ -4,9 +4,9 @@ $(document).ready(function () {
     var cstid = $("#cstid").val();
     var cname = $("#cname").val();
     var contact_no = $("#contact_no").val();
-    var loantype = $("#loantype").val();
+    // var loantype = $("#loantype").val();
     var amount = $("#amount").val();
-//     var duration = $("#duration").val();
+    var duration = $("#duration").val();
     //     console.log(cname);
     //     console.log(contact_no);
     //     console.log(loantype);
@@ -14,12 +14,7 @@ $(document).ready(function () {
     //     console.log(duration);
     if (
       cstid === " "
-      //      &&
-      //     slname === "" &&
-      //     smname === "" &&
-      //     adhaar_number === "" &&
-      //     nationality === "" &&
-      //     dob === ""
+     
     ) {
       $("#data").html('<h4 style="color:red;">Required All Fields..</h4>');
     } else {
@@ -34,9 +29,9 @@ $(document).ready(function () {
 
           setTimeout(function () {
             location.reload(true);
-          }, 2000);
+          }, 5000);
           return false;
-          //     console.log(data);
+        
         },
       });
     }

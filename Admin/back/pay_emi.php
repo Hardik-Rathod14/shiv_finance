@@ -2,7 +2,7 @@
 session_start();
 include("../../db/connect.php");
 
-$cstid = base64_decode($_SESSION['cstid']);
+// $cstid = base64_decode($_SESSION['cstid']);
 $branch = base64_decode($_SESSION['branch']);
 
 $new_loan = $branch . '_' . 'new_loan';
@@ -59,8 +59,8 @@ if (isset($_POST['pay'])) {
             // $paid = $row['paid'];
 
       }
-      $ptmp_amt =$paid_amount + $amount;
-      $pending_amount = $loan_amount - $ptmp_amt;
+      // $ptmp_amt =$paid_amount + $amount;
+      // $pending_amount = $loan_amount - $ptmp_amt;
 
 
 
